@@ -1,6 +1,9 @@
+let nombreUsuario;
 let result;
+let alturaUsuario;
+let pesoUsuario;
 function greet() {
-    let nombreUsuario=prompt("¿Cuál es su nombre?");
+    nombreUsuario=prompt("¿Cuál es su nombre?");
     alert(`Bienvenido ${nombreUsuario}!`);
     return;
 }
@@ -14,7 +17,14 @@ function changeText(elementById, text) {
     return document.getElementById(elementById).innerHTML=text;
 }
 
+function imcStart() {
+    changeText(`imcCalculator`,`${nombreUsuario}, por favor, ingresa tu altura`);
+    document.getElementById(`imcInput`).removeAttribute("hidden");
+}
+
 changeText("addFunctionDescription","Add a number for duplicate");
 changeText("duplicate","duplicate");
 greet();
+changeText(`imcCalculator`,`Calcular mi IMC`);
+
 
