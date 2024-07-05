@@ -1,4 +1,4 @@
-let numeroIngresado;
+let result;
 function greet() {
     let nombreUsuario=prompt("¿Cuál es su nombre?");
     alert(`Bienvenido ${nombreUsuario}!`);
@@ -6,7 +6,8 @@ function greet() {
 }
 
 function duplicateNumber() {
-    return console.log(4)
+    result=parseInt(document.getElementById(`numberToMultiply`).value)*2;
+    return alert(`The result is ${result}`);
 }
 
 function changeText(elementById, text) {
@@ -16,5 +17,4 @@ function changeText(elementById, text) {
 changeText("addFunctionDescription","Add a number for duplicate");
 changeText("duplicate","duplicate");
 greet();
-
 
