@@ -7,6 +7,9 @@ function greet() {
     alert(`Bienvenido ${nombreUsuario}!`);
     return;
 }
+function addData(){
+    return alturaUsuario==undefined?alturaUsuario=parseInt(document.getElementById("imcInput").value):pesoUsuario=parseInt(document.getElementById("imcInput").value);
+}
 
 function duplicateNumber() {
     result=parseInt(document.getElementById(`numberToMultiply`).value)*2;
@@ -20,6 +23,7 @@ function changeText(elementById, text) {
 function imcStart() {
     changeText(`imcCalculator`,`${nombreUsuario}, por favor, ingresa tu altura`);
     document.getElementById(`imcInput`).removeAttribute("hidden");
+    changeText("addButtonImc", "Enter")
 }
 
 changeText("addFunctionDescription","Add a number for duplicate");
